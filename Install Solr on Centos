@@ -1,9 +1,8 @@
 sudo yum install lsof java-1.8.0-openjdk  java-1.8.0-openjdk-devel
-export LATEST_VER="8.4.0"
-curl -O https://www-eu.apache.org/dist/lucene/solr/${LATEST_VER}/solr-${LATEST_VER}.tgz
-tar xvf solr-${LATEST_VER}.tgz
-cd solr-${LATEST_VER}/bin/
-sudo ./install_solr_service.sh ~/solr-${LATEST_VER}.tgz
+curl -O https://downloads.apache.org/lucene/solr/8.7.0/solr-8.7.0.tgz
+tar xvf solr-8.7.0.tgz
+cd solr-8.7.0/bin/
+sudo ./install_solr_service.sh ~/solr-8.7.0.tgz
 sudo systemctl start solr
 sudo yum update
 sudo yum install httpd
